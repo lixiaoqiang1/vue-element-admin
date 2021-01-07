@@ -5,14 +5,26 @@ import { asyncRoutes, constantRoutes } from '@/router'
  * @param roles
  * @param route
  */
-function hasPermission(roles, route) {
-  if (route.meta && route.meta.roles) {
-    return roles.some(role => route.meta.roles.includes(role))
-  } else {
-    return true
-  }
+// function hasPermission(roles, route) {
+//   if (route.meta && route.meta.roles) {
+//     return roles.some(role => route.meta.roles.includes(role))
+//   } else {
+//     return true
+//   }
+// }
+function hasPermission(permissions, route) {
+  // if (route.meta !== undefined && route.meta.icon !== undefined) {
+  //   if (route.children) {
+  //     for (const item of route.children) {
+  //       if (permissions.includes(item.path)) {
+  //         return true
+  //       }
+  //     }
+  //   }
+  //   return permissions.includes(route.path)
+  // }
+  return true
 }
-
 /**
  * Filter asynchronous routing tables by recursion
  * @param routes asyncRoutes

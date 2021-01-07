@@ -110,7 +110,7 @@ export const asyncRoutes = [
     alwaysShow: true, // will always show the root menu
     name: 'Permission',
     meta: {
-      title: '许可',
+      title: '动态许可',
       icon: 'lock',
       roles: ['admin', 'editor'] // you can set roles in root nav
     },
@@ -137,14 +137,14 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/icon',
+    path: '/shezhi',
     component: Layout,
     children: [
       {
-        path: 'index',
+        path: 'jurisdiction',
         component: () => import('@/views/icons/index'),
         name: 'Icons',
-        meta: { title: '图标', icon: 'icon', noCache: true }
+        meta: { title: '动态图标', icon: 'icon', noCache: true }
       }
     ]
   },
